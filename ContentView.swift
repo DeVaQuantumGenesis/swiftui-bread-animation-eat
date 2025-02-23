@@ -1,3 +1,5 @@
+// Made by DeVa CEO Naoki Takehara
+
 import SwiftUI
 
 struct SplitButtonView: View {
@@ -6,6 +8,8 @@ struct SplitButtonView: View {
     
     var body: some View {
         ZStack {
+            Color.blue
+            .ignoresSafeArea()
             HStack(spacing: isSplit ? 20 : 0) {
                 ButtonPart(isLeft: true)
                     .offset(x: isSplit ? -50 : 0)
@@ -48,7 +52,7 @@ struct ButtonPart: View {
     
     var body: some View {
         Rectangle()
-            .fill(Color.blue)
+            .foregroundStyle(.ultraThinMaterial)
             .frame(width: 90, height: 60)
             .cornerRadius(15)
           //.clipShape(TearShape())
